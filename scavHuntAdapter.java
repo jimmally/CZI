@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
@@ -83,7 +85,25 @@ public class scavHuntAdapter extends ArrayAdapter<SH> {
         holder.birthday.setText(person.getId());
         holder.sex.setText(person.getOwnerId());
 
+        Animation animation = null;
+        animation = AnimationUtils.loadAnimation(mContext, R.anim.fade_in);
+        convertView.startAnimation(animation);
+
+        /*
+        switch (MainActivity.animationItem) {
+            case R.id.fade;
+            animation = AnimationUtils.loadAnimation(context, R.anim.fade_in);
+            convertView.startAnimation(animation);
+            break;
+        }*/
+
+
+
+
+        convertView.startAnimation(animation);
 
         return convertView;
     }
+
+
 }

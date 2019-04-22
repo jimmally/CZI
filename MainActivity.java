@@ -3,6 +3,7 @@ package  com.example.czi_list;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.animation.Animation;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -13,6 +14,7 @@ import com.example.czi_list.listViewClasses.SH;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    public static int animationItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,21 @@ public class MainActivity extends AppCompatActivity {
         SH testingScav1 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
 
         SH testingScav2 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+        SH testingScav3 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+
+        SH testingScav4 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+        SH testingScav5 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+
+        SH testingScav6 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+        SH testingScav7 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+
+        SH testingScav8 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+        SH testingScav9 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+
+        SH testingScav10 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+        SH testingScav11 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
+
+        SH testingScav12 = new SH("THIS", "TEST ", "TITLE IS WORKING", "SCAVENGER");
 
 
         /*
@@ -48,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<SH> peopleList = new ArrayList<>();
         peopleList.add(testingScav1);
         peopleList.add(testingScav2);
+        peopleList.add(testingScav3);
+        peopleList.add(testingScav4);
+        peopleList.add(testingScav5);
+        peopleList.add(testingScav6);
+        peopleList.add(testingScav7);
+        peopleList.add(testingScav8);
+        peopleList.add(testingScav9);
+        peopleList.add(testingScav10);
+        peopleList.add(testingScav11);
+        peopleList.add(testingScav12);
 
 
         /*
@@ -69,5 +96,8 @@ public class MainActivity extends AppCompatActivity {
 
         scavHuntAdapter adapter = new scavHuntAdapter(this, R.layout.adapter_view_layout, peopleList);
         mListView.setAdapter(adapter);
+
+
     }
+
 }
